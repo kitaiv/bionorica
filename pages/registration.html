@@ -7,37 +7,50 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 
 </head>
 <body class="d-flex justify-content-center align-items-center position-absolute">
     <div class="wrapper">
+        <div class="alert alert-danger d-none" role="alert" id="alert">
+            Неверно введённые данные попробуйте еще раз!
+        </div>
         <div class="row reg-content">
             <div class="col text-center">
                 <h1>Годовое совещание сотрудников Компании Бионорика начнется через</h1>
             </div>
-            <div class="col text-center">
-                <div class="timer">
-                    <p>123: 123 : 1321</p>
+            <div class="col text-center mt-4">
+                <div class="timer" id="countdown">
+                    <p><span class="days">X</span>:<span class="hours">X</span>:<span class="minutes">X</span>:<span class="seconds">X</span></p>
                 </div>
             </div>
             <div class="col">
                 <form action="#" class="reg-form">
                     <label for="fop">
-                        ФОП
-                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" id="fop">
+                        ФИО
+                        <input type="text" class="form-control" placeholder="Укажите ФИО" aria-label="Recipient's username" aria-describedby="basic-addon2" id="fop">
                     </label>
                     <label for="email">
                         Email
-                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" id="email">
+                        <input type="text" class="form-control" placeholder="Укажите email" aria-label="Recipient's username" aria-describedby="basic-addon2" id="email">
                     </label>
                     <label for="pass">
                         Пароль
-                        <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2" id="pass">
+                        <input type="text" class="form-control" placeholder="Укажите пароль" aria-label="Укажите пароль" aria-describedby="basic-addon2" id="pass">
                     </label>
-                    <button id="regBtn">Зарегистрироваться</button>
+                    <button class="btn btn-primary mt-3 p-3" type="button" id="regBtn" style="background: #00457D" >
+                        Зарегистрироваться
+                        <span role="status" aria-hidden="true" id="loader"></span>
+                        <span class="sr-only"></span>
+                    </button>
                 </form>
             </div>
-            <div>
+            <div class="col text-center mt-5">
                 <p>Техническая поддержка: Александр +7-938-312-92-58</p>
             </div>
         </div>
